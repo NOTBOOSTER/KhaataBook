@@ -1,4 +1,3 @@
-const { Console } = require("console");
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -13,8 +12,8 @@ app.use(express.static(path.join(__dirname, "public"))); //
 
 //hendling home page route
 app.get("/", (req, res) => {
-  const hisaabData = fs.readdir(data, (err, dataDir) => {
-    if (err) Console.log(err);
+  fs.readdir(data, (err, dataDir) => {
+    if (err) console.log(err);
     res.render("index", { data: dataDir });
   });
 });
@@ -88,6 +87,10 @@ app.get("/delete/:date/confirmed" , (req, res) => {
   })
   });
 
+  // * route
+  app.get("*", (req, res) => {
+    res.redirect("/");
+  })
 // test route
 app.get("/test", (req, res) => {
   res.send("hey");
@@ -101,6 +104,7 @@ const getDate = () => {
   const year = getDate.getFullYear();
   return `${day}-${month}-${year}`;
 };
+
 
 // starting the server
 app.listen(3000);
