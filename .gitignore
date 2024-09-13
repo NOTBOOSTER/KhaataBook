@@ -1,0 +1,57 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment Variables
+.env
+
+# Sensitive information
+*.pem
+*.key
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+jspm_packages/
+
+# Distribution / build folders
+dist/
+out/
+build/
+tmp/
+
+# EJS Views Compiled Cache
+views/*.ejs~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage directory used by testing tools
+coverage/
+
+# Dependency directories
+bower_components/
+
+# Miscellaneous
+*.swp
+*.swo
+
+# Debug files
+*.bak
+
+# Specific files that should not be versioned
+config.js
+secret.js

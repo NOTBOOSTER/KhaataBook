@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/2e8feb8b24.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <div class="w-screen h-screen bg-gray-100 px-10 items-center">
+      <nav class="flex justify-between pt-3">
+        <a href="/" class="text-2xl">KhaataBook</a>
+        <ul class="flex gap-3">
+          <li class=""><a href="/">Home</a></li>
+          <li class=""><a href="/create">Create New Hisab</a></li>
+        </ul>
+      </nav>
+      <h1 class="text-xl mt-10">Here's hisaab of <span class="text-blue-400"><%= date %></span> date</h1>
+      <a class="text-blue-400 text-sm" href="/edit/<%= date %>">Edit Hisaab</a>
+      <p class="mt-2 p-4 font-semibold"><%= data %></p>
+    </div>
+  </body>
+</html>
